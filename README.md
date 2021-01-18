@@ -1,0 +1,1 @@
+# wpml-fp-manual
