@@ -29,7 +29,7 @@ $someArray = Fns::each( function( $val ) {
 }, $someArray );
 ```
 
-## Use Obj::prop() instead of obtaining directly
+## Use Obj::prop() instead of obtaining properties directly
 
 Instead of:
 
@@ -61,3 +61,27 @@ $data->foo = 'bar';
 Obj::prop( 'foo', $data ); // the same as above
 ```
 
+## Use Obj::keys instead of array_keys
+
+Instead of:
+```
+$data [
+  'foo' => 'bar'
+];
+array_keys( $data );
+```
+write:
+```
+$data [
+  'foo' => 'bar'
+];
+Obj::keys( $data ); // returns [ 'foo' ]
+```
+
+You can obtain public object properties in the same way:
+```
+$data = new stdClass();
+$data->foo = 'bar';
+
+Obj::keys( $data ); // returns [ 'foo' ]
+```
