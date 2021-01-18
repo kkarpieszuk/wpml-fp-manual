@@ -4,6 +4,10 @@ Non official WPML Functional Programming Library manual
 
 Repository url: https://git.onthegosystems.com/wpml-packages/fp
 
+## Installation
+
+`composer require wpml/fp`
+
 ## Use Fns::each() in place of foreach
 
 Instead of writing:
