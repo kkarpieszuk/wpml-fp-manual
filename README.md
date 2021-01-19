@@ -114,4 +114,4 @@ Fns::each( 'strtoupper', $screamBar( $data ) );
 
 Notice this time function in pipe does not take processed data as a second argument. Data comes from:
 - first from function call with $data as argument (`$screamBar( $data )`)
-- then data is passed from left to the right throught the pipe. So `Fns::prop( 'foo' )` gets data from function call above, then it runs actions on it and what it returns, goes to the next function (`Fns::keys()` gets the result of `Fns::prop( 'foo' )` which is `[ 'bar' => 'baz' ])
+- then data is passed from left to the right throught the pipe. So `Fns::prop( 'foo' )` gets data from function call above, then it runs actions on it and what it returns, goes to the next function (`Fns::keys()` gets the result of `Fns::prop( 'foo' )` which is `[ 'bar' => 'baz' ]`)
