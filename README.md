@@ -65,14 +65,14 @@ Obj::prop( 'foo', $data ); // the same as above
 
 Instead of:
 ```
-$data [
+$data = [
   'foo' => 'bar'
 ];
 array_keys( $data );
 ```
 write:
 ```
-$data [
+$data = [
   'foo' => 'bar'
 ];
 Obj::keys( $data ); // returns [ 'foo' ]
@@ -85,3 +85,33 @@ $data->foo = 'bar';
 
 Obj::keys( $data ); // returns [ 'foo' ]
 ```
+
+## Use pipe() for ordered execution
+
+You can chain functions to be executed from left to right with `pipe()`.
+
+Instead of writing:
+```
+$data = [
+  'foo' => [
+    'bar' => 'baz'
+  ]
+];
+
+Fns::each( 'strtoupper', Fns::keys( Fns::prop( 'foo', $data ) ) );
+```
+write:
+```
+$data = [
+  'foo' => [
+    'bar' => 'baz'
+  ]
+];
+$screamBar = pipe( Fns::prop( 'foo' ), Fns::keys()  );
+
+Fns::each( 'strtoupper', $screamBar( $data ) );
+```
+
+Notice this time function in pipe does not take processed data as a second argument. Data comes from:
+- first from function call with $data as argument (`$screamBar( $data )`)
+- then data is passed from left to the right throught the pipe. So `Fns::prop( 'foo' )` gets data from function call above, then it runs actions on it and what it returns, goes to the next function (`Fns::keys()` gets the result of `Fns::prop( 'foo' )` which is `[ 'bar' => 'baz' ])
