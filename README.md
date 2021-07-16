@@ -61,7 +61,7 @@ $data->foo = 'bar';
 Obj::prop( 'foo', $data ); // the same as above
 ```
 
-## Use Obj::pathOr to get default value or value from nested structure
+## Use Obj::pathOr() to get default value or value from nested structure
 
 If you have an array like this:
 ```
@@ -71,7 +71,7 @@ $data = [
   ]
 ];
 ```
-and you wnat to obtain `baz` you can use:
+and you want to obtain `baz` you can use:
 ```
 $value = Obj::pathOr( 'not found', [ 'foo', 'bar' ], $data ); // returns 'baz'
 ```
