@@ -1,3 +1,23 @@
+functions.php
+```
+    710  tryCatch(
+    400  curryN(
+    302  curry(
+    257  chain(
+    244  apply(
+    237  pipe(
+    192  invoke(
+    157  either(
+    149  compose(
+    109  flip(
+     66  partial(
+     65  flatMap(
+     55  tap(
+     38  spreadArgs(
+     27  partialRight(
+      6  gatherArgs(
+```
+
 Fns
 ```
 sitepress-multilingual-cms$ grep -oh -d recurse " Fns::[a-z]*(" * | sort | uniq -c | sort -r
