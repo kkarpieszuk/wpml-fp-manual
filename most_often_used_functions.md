@@ -1,37 +1,37 @@
 functions.php
 ```
-    710  tryCatch(
-    400  curryN(
-    302  curry(
-    257  chain(
-    244  apply(
-    237  pipe(
-    192  invoke(
-    157  either(
-    149  compose(
-    109  flip(
-     66  partial(
-     65  flatMap(
-     55  tap(
-     38  spreadArgs(
-     27  partialRight(
-      6  gatherArgs(
+    320  curryN(
+    154  pipe(
+     45  invoke(
+     37  partial(
+     36  spreadArgs(
+     25  partialRight(
+     15  flip(
+     14  apply(
+      8  chain(
+      8  compose(
+      7  tryCatch(
+      7  tap(
+      4  gatherArgs(
+      3  curry(
+      3  either(
+      2  flatMap(
 ```
 
 Fns
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Fns::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Fns::[a-z]*(" * | sort | uniq -c | sort -r
      94  Fns::map(
-     68  Fns::always(
-     57  Fns::identity(
+     65  Fns::always(
+     51  Fns::identity(
      34  Fns::tap(
      31  Fns::filter(
-     27  Fns::converge(
+     24  Fns::converge(
      20  Fns::memorize(
-     19  Fns::unary(
+     17  Fns::unary(
      12  Fns::reject(
      12  Fns::reduce(
-      8  Fns::until(
+      5  Fns::until(
       4  Fns::make(
       3  Fns::value(
       3  Fns::noop(
@@ -45,19 +45,19 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Fns::[a-z]*(" * | sort | uniq 
 ```
 Obj
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Obj::[a-z]*(" * | sort | uniq -c | sort -r
-    315  Obj::prop(
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Obj::[a-z]*(" * | sort | uniq -c | sort -r
+    313  Obj::prop(
      55  Obj::path(
-     39  Obj::keys(
-     37  Obj::values(
      27  Obj::assoc(
+     24  Obj::keys(
+     22  Obj::values(
      14  Obj::over(
       8  Obj::pick(
       7  Obj::view(
       5  Obj::without(
       5  Obj::set(
-      5  Obj::has(
       4  Obj::props(
+      4  Obj::has(
       4  Obj::evolve(
       2  Obj::where(
       2  Obj::project(
@@ -65,14 +65,14 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Obj::[a-z]*(" * | sort | uniq 
 ```
 Either
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Either::[a-z]*(" * | sort | uniq -c | sort -r
-     90  Either::left(
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Either::[a-z]*(" * | sort | uniq -c | sort -r
+     89  Either::left(
      88  Either::of(
      62  Either::right(
 ```
 Logic
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Logic::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Logic::[a-z]*(" * | sort | uniq -c | sort -r
      14  Logic::not(
      14  Logic::both(
      13  Logic::complement(
@@ -84,19 +84,18 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Logic::[a-z]*(" * | sort | uni
 ```
 Lst
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Lst::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Lst::[a-z]*(" * | sort | uniq -c | sort -r
      55  Lst::includes(
-     27  Lst::pluck(
+     25  Lst::pluck(
      23  Lst::nth(
      21  Lst::concat(
      19  Lst::find(
-     18  Lst::length(
-     17  Lst::join(
+     17  Lst::length(
+     14  Lst::join(
      11  Lst::repeat(
       8  Lst::diff(
       8  Lst::append(
       7  Lst::last(
-      6  Lst::xprod(
       6  Lst::insert(
       5  Lst::sort(
       5  Lst::range(
@@ -104,6 +103,7 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Lst::[a-z]*(" * | sort | uniq 
       5  Lst::drop(
       4  Lst::zip(
       4  Lst::slice(
+      3  Lst::xprod(
       3  Lst::reverse(
       3  Lst::partition(
       3  Lst::flatten(
@@ -113,14 +113,14 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Lst::[a-z]*(" * | sort | uniq 
 ```
 Math
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Math::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Math::[a-z]*(" * | sort | uniq -c | sort -r
       9  Math::add(
       7  Math::multiply(
       3  Math::product(
 ```
 Maybe
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Maybe::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Maybe::[a-z]*(" * | sort | uniq -c | sort -r
      49  Maybe::of(
      21  Maybe::nothing(
       4  Maybe::just(
@@ -128,9 +128,9 @@ sitepress-multilingual-cms$ grep -oh -d recurse " Maybe::[a-z]*(" * | sort | uni
 ```
 Relation
 ```
-sitepress-multilingual-cms$ grep -oh -d recurse " Relation::[a-z]*(" * | sort | uniq -c | sort -r
+sitepress-multilingual-cms$ grep -oh --include=*.php -d recurse " Relation::[a-z]*(" * | sort | uniq -c | sort -r
      35  Relation::equals(
-     30  Relation::gt(
+     27  Relation::gt(
      16  Relation::lt(
      16  Relation::gte(
      15  Relation::lte(
